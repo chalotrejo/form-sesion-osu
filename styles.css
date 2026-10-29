@@ -1,0 +1,320 @@
+/* ======================================================================
+   ESTILOS OSU! STYLE - LOGIN / PORTAL DE JUGADORES
+   ====================================================================== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    overflow-y: auto;
+    background-color: #17131f;
+}
+
+/* Contenedor general */
+.portal-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    min-height: 100vh;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .portal-container {
+        grid-template-columns: 1fr;
+    }
+    .portal-brand-side {
+        padding: 3rem 1.5rem !important;
+        min-height: 280px;
+    }
+}
+
+/* --------------------------------------------------------------------
+   PANEL IZQUIERDO
+   -------------------------------------------------------------------- */
+.portal-brand-side {
+    background:
+        radial-gradient(circle at 30% 20%, rgba(255, 102, 170, 0.25), transparent 40%),
+        linear-gradient(145deg, #17131f 0%, #2a1a3a 60%, #1a1225 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    color: white;
+}
+
+.brand-content {
+    max-width: 450px;
+}
+
+/* Insignia superior */
+.brand-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(255, 102, 170, 0.18);
+    border: 1px solid rgba(255, 102, 170, 0.4);
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #ff99cc;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 0 16px rgba(255, 102, 170, 0.2);
+}
+
+.badge-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #ff66aa;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ff66aa;
+}
+
+.brand-logo-large {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+.brand-logo-large .logo-icon {
+    font-size: 2rem;
+    color: #ff66aa;
+}
+
+.brand-logo-large h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #fff;
+}
+
+.brand-logo-large h1 span {
+    color: #ff66aa;
+}
+
+.brand-tagline {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #c9b8d9;
+}
+
+/* Características */
+.brand-features {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    background: rgba(255, 102, 170, 0.08);
+    border: 1px solid rgba(255, 102, 170, 0.2);
+    padding: 14px 18px;
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 102, 170, 0.5);
+    box-shadow: 0 0 20px rgba(255, 102, 170, 0.2);
+}
+
+.feature-icon {
+    font-size: 1.3rem;
+    background: rgba(255, 102, 170, 0.2);
+    padding: 8px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-item h4 {
+    color: #ff99cc;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.feature-item p {
+    color: #c9b8d9;
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+/* --------------------------------------------------------------------
+   PANEL DERECHO: FORMULARIO
+   -------------------------------------------------------------------- */
+.portal-form-side {
+    background-color: #1a1428;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.login-card {
+    background: rgba(30, 22, 42, 0.95);
+    padding: 2.5rem;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 102, 170, 0.3);
+    box-shadow: 0 0 40px rgba(255, 102, 170, 0.2);
+    width: 100%;
+    max-width: 480px;
+}
+
+/* Encabezado */
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h2 {
+    color: #ff99cc;
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+    text-shadow: 0 0 16px rgba(255, 102, 170, 0.3);
+}
+
+.login-header p {
+    color: #c9b8d9;
+    font-size: 0.9rem;
+}
+
+/* Campos */
+.input-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #d4c4e8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid rgba(255, 102, 170, 0.3);
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: rgba(15, 11, 22, 0.7);
+    color: #f0e6ff;
+    transition: all 0.25s ease;
+}
+
+input:focus, 
+select:focus, 
+textarea:focus {
+    border-color: #ff66aa;
+    outline: none;
+    background-color: rgba(15, 11, 22, 0.9);
+    box-shadow: 0 0 0 3px rgba(255, 102, 170, 0.25);
+}
+
+/* Checkboxes */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 0.5rem;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    width: auto;
+    cursor: pointer;
+    accent-color: #ff66aa;
+}
+
+/* Enlace de ayuda */
+.form-actions-help {
+    text-align: right;
+    margin-bottom: 1.5rem;
+}
+
+.forgot-link {
+    color: #ff66aa;
+    font-size: 0.85rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: text-shadow 0.2s;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(255, 102, 170, 0.5);
+}
+
+/* Botón principal */
+.btn-submit {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #ff66aa 0%, #e85d9e 100%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 0 22px rgba(255, 102, 170, 0.45);
+    transition: transform 0.25s, box-shadow 0.25s;
+    margin-top: 0.5rem;
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 36px rgba(255, 102, 170, 0.75);
+}
+
+.btn-submit:active {
+    transform: scale(0.97);
+}
+
+/* Pie de tarjeta */
+.login-footer {
+    text-align: center;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 102, 170, 0.2);
+}
+
+.login-footer p {
+    color: #c9b8d9;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #ff66aa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 10px rgba(255, 102, 170, 0.5);
+}
